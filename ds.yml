@@ -27,8 +27,6 @@ kind: Service # Kubernetes resource kind we are creating
 metadata: # Metadata of the resource kind we are creating
   name: mission-ssvc
 spec:
-  #new change because not deploy on AKS
-  type: Nodeport
   selector:
     app: mission
   ports:
@@ -37,6 +35,6 @@ spec:
       port: 8080 
       # The port exposed by the service
       targetPort: 8080
-      #new change because not deploy on AKS
-      nodePort: 30001  
+     
+     
   type: LoadBalancer # type of the service.
