@@ -34,9 +34,9 @@ spec:
   ports:
     - protocol: "TCP"
       # The port that the service is running on in the cluster
-      port: 80 
+      port: 8080 
       # The port exposed by the service
-      targetPort: 8085 
+      targetPort: 8080
       #new change because not deploy on AKS
       nodePort: 30001  
   type: LoadBalancer # type of the service.
